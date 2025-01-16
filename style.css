@@ -1,0 +1,551 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*loader css*/
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #121212; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+}
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3; 
+  border-top: 5px solid #3498db; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+body.loaded #loader {
+  display: none;
+}
+/* Vav bar css */
+.custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #03012C;
+  }
+
+  .custom-navbar .logo {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }  
+  .custom-navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  .custom-navbar .nav-links li {
+    display: inline-block;
+  }
+
+  .custom-navbar .nav-links a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .custom-navbar .nav-links a:hover {
+    color: #03012C;
+    background-color: #FFFFFF;
+  }
+  /* image for a logo in navbar */
+.image-logo{
+    width: 80px;
+    height: 80px;
+}
+/* css style of a main page in web */
+.home-page{
+  height: 100vh; 
+  background: url('media/homeimg.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+}
+/* Custome h2 tag css */
+.h-1{
+  text-align: center;
+  font-size: 4rem;
+  color: #FFFFFF;
+}
+.h-1:hover{
+  text-align: center;
+  text-decoration: underline;
+}
+/* A cards of player in home page */
+.definition-page{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color:#03012C;
+}
+.img-title{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #FF7F11;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.camp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  text-align: center;
+  background-color:#03012C; 
+  
+}
+
+.video h3 {
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.8rem; 
+  color:#f9c320; 
+  background-color: darkred;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 18px;
+}
+
+.video h3:hover {
+  color: white; 
+  transform: scale(1.1); 
+  cursor: pointer; 
+}
+
+
+.video iframe {
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+
+
+
+.players-container {
+  display: flex; 
+  background-color: #03012C;
+  justify-content: center; 
+  gap: 20px; 
+  padding: 25px; 
+  flex-wrap: wrap; 
+}
+
+.player-card {
+  width: 300px; 
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-image {
+  position: relative;
+}
+
+.player-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.player-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.player-image:hover .player-stats {
+  opacity: 1;
+}
+
+.player-info {
+  background: #fff;
+  padding: 15px;
+  color: #333;
+  font-size: 16px;
+}
+
+.player-info h3 {
+  margin: 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.player-info p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+
+.footer {
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+}
+
+.social-media {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-media h3 {
+  font-size: 1.5em;
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.social-icon:hover {
+  background-color: #444;
+}
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-size: 0.9em;
+  line-height: 1.8;
+  color: #b3b3b3;
+}
+
+.footer-column li:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  font-size: 0.9em;
+  color: #b3b3b3;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+.players-container1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  background-color:#03012C ;
+
+}
+
+.position-group {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+.position-group h2 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  
+}
+
+.player-card1 {
+  width: 150px;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.player-card1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.player-card1 h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0 0.2rem;
+  color: #003366;
+}
+
+.player-card1 p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+.player-card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* css for the market*/
+.market-home{
+  height: 100vh; 
+  background: url('media/kitimg1.png') no-repeat center center/cover; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3.5rem;
+  font-family: sans-serif;
+}
+.kits{
+  margin-left: -30px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: -10px;
+  margin-right: 50px;
+}
+
+.custom-button {
+  display: inline-block;
+  background-color: #ffd700; 
+  color: #000; 
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.custom-button:hover {
+  background-color: #ffcc00; 
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button::after {
+  content: "→";
+  font-size: 1.5rem;
+  margin-left: 10px;
+  position: relative;
+  top: 1px;
+  transition: margin-left 0.3s ease;
+}
+
+.custom-button:hover::after {
+  margin-left: 15px;
+}
+
+
+.clublegends{
+  height: 100vh; 
+  background: url('media/leg.png') no-repeat center center/cover; 
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3.5rem;
+  font-family: sans-serif;
+}
+/* css of club legends*/
+.legends-section {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(45deg, #a50044, #004d98);
+}
+
+.legends-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Legends Container */
+.legends-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Legend Card */
+.legend-card {
+  background-color: #fff;
+  color: #1d1f38;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.legend-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Legend Image */
+.legend-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Legend Card Content */
+.legend-card h2 {
+  font-size: 1.8rem;
+  margin: 10px;
+  color: #a50044;
+}
+
+.legend-card .position, 
+.legend-card .years {
+  font-size: 1rem;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #004d98;
+}
+
+.legend-card .achievements {
+  font-size: 0.9rem;
+  margin: 10px;
+  line-height: 1.6;
+}
+
+.video-section {
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #004d98, #a50044);
+  color: white;
+  border-radius: 10px;
+}
+
+.video-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+}
+
+.video-section video {
+  width: 80%;
+  max-width: 800px;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
